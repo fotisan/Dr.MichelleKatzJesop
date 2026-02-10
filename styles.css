@@ -373,18 +373,20 @@ a{ color: inherit; text-decoration: none; }
   box-shadow: var(--shadow);
   position: relative;
 }
+
+/* --- ΛΥΣΗ 1: ΕΦΕ ΚΟΡΝΙΖΑΣ (ZOOM OUT) --- */
 .hero-image-wrap{
   border-bottom: 1px solid var(--line);
-  background: #f0f0f0;
+  background: #f0f0f0; /* Χρώμα πλαισίου/κορνίζας */
+  padding: 25px;       /* Προσθέτει το κενό γύρω από τη φωτογραφία */
 }
 
-/* --- ΤΡΟΠΟΠΟΙΗΣΗ ΛΥΣΗ 2: ΕΣΤΙΑΣΗ ΨΗΛΑ --- */
 .hero-image{
   width:100%;
   height:100%;
   object-fit: cover;
   aspect-ratio: 4 / 3;
-  object-position: top center; /* Εστιάζει στο πάνω μέρος για να μην κόβει το κεφάλι */
+  border-radius: 8px; /* Στρογγυλεύει τις γωνίες της φωτογραφίας μέσα στην κορνίζα */
 }
 
 .hero-card-body{
